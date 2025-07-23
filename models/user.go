@@ -1,7 +1,10 @@
 package models
 
+import "gorm.io/gorm"
+
 type User struct {
-	ID    string `json:"id"`
-	Name  string `json:"name"`
-	Email string `json:"email"`
+	gorm.Model        // Embeds ID, CreatedAt, UpdatedAt, DeletedAt
+	Name       string `gorm:"size:255;not null"`
+	Email      string `gorm:"unique;not null"`
+	Password   string `gorm:"not null"`
 }

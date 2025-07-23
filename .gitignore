@@ -29,9 +29,10 @@ go.work.sum
 
 # Editor/IDE
 # .idea/
-# .vscode/
+ .vscode/
 
 # Air
 .air.toml
 .air
 *tmp
+docker-compose.yml
